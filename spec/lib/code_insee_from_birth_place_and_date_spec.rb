@@ -7,7 +7,7 @@ RSpec.describe CodeINSEEForBirthDateAndPlace do
   end
 
   CSV.foreach('./spec/examples.csv', headers: true) do |csv|
-    it "works for #{csv['nom_commune']}, #{csv['annee_naissance']}, #{csv['departement_commune']}", vcr: { cassette_name: csv['code_insee'], record: :new_episodes } do
+    it "works for (#{csv['nom_commune']}, #{csv['annee_naissance']}, #{csv['departement_commune']}): #{csv['notes']}", vcr: { cassette_name: csv['code_insee'], record: :new_episodes } do
       status, payload = CodeINSEEForBirthDateAndPlace.new(csv['nom_commune'], csv['annee_naissance'], csv['departement_commune']).perform
 
       expect(status).to eq(200)
