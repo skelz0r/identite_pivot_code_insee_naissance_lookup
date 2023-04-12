@@ -42,11 +42,25 @@ Copiez `.env.example` vers `.env`, et remplacez les valeurs:
 - Pour l'INSEE, créer un compte sur [l'API de l'INSEE](https://api.insee.fr/),
     souscrivez à l'API Metadonnées, et c/c le consumer_key/consumer_secret
 
+### with Docker
+
+```sh
+docker build . -t identite_pivot_code_insee_naissance_lookup:main
+```
+
 ## Run
 
 ```sh
 bundle exec rackup
 ```
+
+### with Docker
+
+```sh
+docker run -p 9292:9292 identite_pivot_code_insee_naissance_lookup:main
+```
+
+## Check if OK
 
 Un exemple de requête valide en local:
 
@@ -58,4 +72,3 @@ curl "http://localhost:9292?nom_commune=Gennevilliers&annee_naissance=1960&depar
 ## TODO
 
 * Tests (jeux de tests and stuffs pour montrer ce qui marche bien)
-* Micro docker pour run ça n'importe où
