@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Identité pivot : Recherche de code INSEE de la commune de Naissance</title>
+</head>
+<body>
+  <p>
+    Cette API permet de déterminer à l'aide d'un triplet (nom de commune, année de naissance, département de naissance) le code INSEE de la commune de naissance.
+  </p>
+
+  <p>
+    Exemple de commande (tous les paramètres sont obligatoires):
+
+    <pre>curl https://identite-pivot-code-insee-naissance-lookup.fly.dev \
+    -X GET \
+    -d 'nom_commune=Gennevilliers' \
+    -d 'annee_naissance=1960' \
+    -d 'departement_commune=92'</pre>
+  </p>
+
+  <p>
+    Plus d'informations sur <a href="https://github.com/skelz0r/identite_pivot_code_insee_naissance_lookup" target="_blank">skelz0r/identite_pivot_code_insee_naissance_lookup</a>
+  </p>
+</body>
+</html>

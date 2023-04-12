@@ -13,7 +13,7 @@ Cuba.define do
       end
 
       on true do
-        res.write 'Nope'
+        res.write File.read('pages/index.html')
       end
     end
   end
