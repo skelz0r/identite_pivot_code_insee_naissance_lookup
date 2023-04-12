@@ -14,17 +14,39 @@ A l'aide de ces 3 infos, l'API renvoie le code insee de la commune.
 
 ## Contexte
 
-FEEDME
+Dans le cadre d'API Particulier, certaines API acceptent des informations dit
+[Identité
+Pivot](https://partenaires.franceconnect.gouv.fr/fcp/fournisseur-identite#identite-pivot).
 
-Identité pivot / FranceConnect, API Particulier blablabla
+Dans ces informations, il y a le code INSEE de la commune de naissance. Code que
+peu d'usagers (voir aucun) ne connaisse, et qui peut varier dans le temps (pour
+cause de fusion/migration/autre opération entre les communes). Ces diverses
+opérations rendent la tâche de recherche de correspondance ardue.
+
+Cette webapp est une expérimentation/un service permettant de récupérer ce code
+insee à l'aide d'un triplet connue par un usager (décrit ci-dessus).
 
 ## Explications algorithme
 
-FEEDME
+L'algorithme fonctionne de cette manière:
 
-* D'abord couple nom,date sur l'API metadonnées, si 1 seul résultat -> OK
-* Si plus de résultat, lookup sur le département (à priori peu voir pas de
-    chance d'avoir des doublons dans le même département TBD)
+1. Recherche sur l'[API metadonnées de l'INSEE](https://api.insee.fr/catalogue/site/themes/wso2/subthemes/insee/pages/item-info.jag?name=M%C3%A9tadonn%C3%A9es&version=V1&provider=insee),
+   avec le couple (nom de la commune, année), si il n'y a qu'un résultat: on
+   renvoie le code ;
+2. Si il y a plusieurs résultats, on filtre en fonction du département.
+
+Étant donné que la commune de naissance est généralement une commune comportant
+une maternité, les possibles homonymes de communes au sein d'un même département
+sont peu probables (et d'ailleurs non existant en 2023).
+
+### Possibles limitations
+
+Liste non exhaustive:
+
+- Commune dont il existe un homonyme dans le même département (non existant en
+  2023)
+
+Si vous pensez qu'il existe d'autres cas, n'hésitez pas à ouvrir un ticket.
 
 ## Requirements
 
