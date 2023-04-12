@@ -69,6 +69,22 @@ curl "http://localhost:9292?nom_commune=Gennevilliers&annee_naissance=1960&depar
 > {"code_insee":"75036"}
 ```
 
+## Deploy
+
+```sh
+fly deploy
+```
+
+Déployé sur [fly.io](https://fly.io/)
+
+Url: [https://identite-pivot-code-insee-naissance-lookup.fly.dev](https://identite-pivot-code-insee-naissance-lookup.fly.dev)
+
+Un exemple de curl:
+
+```sh
+curl "https://identite-pivot-code-insee-naissance-lookup.fly.dev/?nom_commune=Gennevilliers&annee_naissance=2000&departement_commune=92"
+```
+
 ## TODO
 
 * Tests (jeux de tests and stuffs pour montrer ce qui marche bien)
