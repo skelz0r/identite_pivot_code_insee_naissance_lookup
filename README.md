@@ -1,5 +1,7 @@
 # Lookup du code INSEE de la commune de naissance en fonction d'infos d'identité
 
+[![CI](https://github.com/skelz0r/identite_pivot_code_insee_naissance_lookup/actions/workflows/tests.yml/badge.svg)](https://github.com/skelz0r/identite_pivot_code_insee_naissance_lookup/actions/workflows/tests.yml)
+
 Cette webapp permet à l'aide d'un triplet d'informations d'identité de retrouver
 le code INSEE de la commune de naissance d'un utilisateur.
 
