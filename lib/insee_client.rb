@@ -62,6 +62,6 @@ class INSEEClient
   end
 
   def redis
-    @redis ||= Redis.new(url: ENV['REDIS_URL'] || 'redis://localhost:6379')
+    @redis ||= Redis.new(url: ENV['REDIS_URL'] || 'redis://localhost:6379/7')
   end
 end
