@@ -1,0 +1,98 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.insee.fr/token
+    body:
+      encoding: UTF-8
+      string: grant_type=client_credentials
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Authorization:
+      - Basic <INSEE_AUTH>
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - DENY
+      Cache-Control:
+      - no-store
+      X-Content-Type-Options:
+      - nosniff
+      Set-Cookie:
+      - INSEE=rd4o00000000000000000000ffff0ac348b0o9443; expires=Wed, 12-Apr-2023
+        20:30:51 GMT; path=/; Httponly; Secure
+      - pdapimgateway=rd4o00000000000000000000ffff0ac348ado8280; expires=Wed, 12-Apr-2023
+        20:30:51 GMT; path=/; Httponly; Secure
+      Pragma:
+      - no-cache
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 12 Apr 2023 20:10:51 GMT
+      Transfer-Encoding:
+      - chunked
+      Strict-Transport-Security:
+      - max-age=100000; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"228b0cf6-a049-30f7-af88-8e267f96b299","scope":"am_application_scope
+        default","token_type":"Bearer","expires_in":151091}'
+  recorded_at: Wed, 12 Apr 2023 20:10:51 GMT
+- request:
+    method: get
+    uri: https://api.insee.fr/metadonnees/V1/geo/communes?com=false&date=2000-01-01&filtreNom=Saint-Arnoult
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept:
+      - application/json
+      Authorization:
+      - Bearer <BEARER_TOKEN>
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      Access-Control-Expose-Headers:
+      - Access-Control-Allow-Origin,Access-Control-Allow-Credentials,Content-Disposition
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET
+      Set-Cookie:
+      - INSEE=rd4o00000000000000000000ffff0ac33037o80; expires=Wed, 12-Apr-2023 20:30:53
+        GMT; path=/; Httponly; Secure
+      - pdapimgateway=rd4o00000000000000000000ffff0ac348ado8280; expires=Wed, 12-Apr-2023
+        20:30:53 GMT; path=/; Httponly; Secure
+      Access-Control-Allow-Headers:
+      - authorization,Access-Control-Allow-Origin,Content-Type,SOAPAction
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 12 Apr 2023 20:10:53 GMT
+      Transfer-Encoding:
+      - chunked
+      Strict-Transport-Security:
+      - max-age=100000; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: '[{"code":"14557","uri":"http://id.insee.fr/geo/commune/0ed50446-5665-45b4-8417-1f5e5551b174","type":"Commune","dateCreation":"1943-01-01","intituleSansArticle":"Saint-Arnoult","typeArticle":"0","intitule":"Saint-Arnoult"},{"code":"28324","uri":"http://id.insee.fr/geo/commune/1cce7843-2d29-41e2-ae70-f566f6230a91","type":"Commune","dateCreation":"1943-01-01","intituleSansArticle":"Saint-Arnoult-des-Bois","typeArticle":"0","intitule":"Saint-Arnoult-des-Bois"},{"code":"41201","uri":"http://id.insee.fr/geo/commune/7d77570d-fd1b-41e9-828f-bafeafeb5d25","type":"Commune","dateCreation":"1943-01-01","intituleSansArticle":"Saint-Arnoult","typeArticle":"0","intitule":"Saint-Arnoult"},{"code":"60566","uri":"http://id.insee.fr/geo/commune/7539b18a-57ff-4e80-8171-0a3b05891082","type":"Commune","dateCreation":"1943-01-01","intituleSansArticle":"Saint-Arnoult","typeArticle":"0","intitule":"Saint-Arnoult"},{"code":"76557","uri":"http://id.insee.fr/geo/commune/b804b10e-7573-43db-bf98-335f2fb2fd22","type":"Commune","dateCreation":"1943-01-01","intituleSansArticle":"Saint-Arnoult","typeArticle":"0","intitule":"Saint-Arnoult"},{"code":"78537","uri":"http://id.insee.fr/geo/commune/de637429-266d-4fd0-9a2f-e10a0746b136","type":"Commune","dateCreation":"1943-01-01","intituleSansArticle":"Saint-Arnoult-en-Yvelines","typeArticle":"0","intitule":"Saint-Arnoult-en-Yvelines"}]'
+  recorded_at: Wed, 12 Apr 2023 20:10:53 GMT
+recorded_with: VCR 6.1.0

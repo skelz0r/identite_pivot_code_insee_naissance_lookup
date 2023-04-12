@@ -1,0 +1,105 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.insee.fr/token
+    body:
+      encoding: UTF-8
+      string: grant_type=client_credentials
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Authorization:
+      - Basic <INSEE_AUTH>
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - DENY
+      Cache-Control:
+      - no-store
+      X-Content-Type-Options:
+      - nosniff
+      Set-Cookie:
+      - INSEE=rd4o00000000000000000000ffff0ac348b1o9443; expires=Wed, 12-Apr-2023
+        20:30:55 GMT; path=/; Httponly; Secure
+      - pdapimgateway=rd4o00000000000000000000ffff0ac348aco8280; expires=Wed, 12-Apr-2023
+        20:30:55 GMT; path=/; Httponly; Secure
+      Pragma:
+      - no-cache
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 12 Apr 2023 20:10:55 GMT
+      Transfer-Encoding:
+      - chunked
+      Strict-Transport-Security:
+      - max-age=100000; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"228b0cf6-a049-30f7-af88-8e267f96b299","scope":"am_application_scope
+        default","token_type":"Bearer","expires_in":151087}'
+  recorded_at: Wed, 12 Apr 2023 20:10:55 GMT
+- request:
+    method: get
+    uri: https://api.insee.fr/metadonnees/V1/geo/communes?com=false&date=2000-01-01&filtreNom=La%20Rochette
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept:
+      - application/json
+      Authorization:
+      - Bearer <BEARER_TOKEN>
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      Access-Control-Expose-Headers:
+      - Access-Control-Allow-Origin,Access-Control-Allow-Credentials,Content-Disposition
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET
+      Set-Cookie:
+      - INSEE=rd4o00000000000000000000ffff0ac33037o80; expires=Wed, 12-Apr-2023 20:30:57
+        GMT; path=/; Httponly; Secure
+      - pdapimgateway=rd4o00000000000000000000ffff0ac348ado8280; expires=Wed, 12-Apr-2023
+        20:30:57 GMT; path=/; Httponly; Secure
+      Access-Control-Allow-Headers:
+      - authorization,Access-Control-Allow-Origin,Content-Type,SOAPAction
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 12 Apr 2023 20:10:56 GMT
+      Transfer-Encoding:
+      - chunked
+      Strict-Transport-Security:
+      - max-age=100000; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: '[{"code":"04170","uri":"http://id.insee.fr/geo/commune/7a3fdd0d-14a1-49d6-9c1c-4264eaf68863","type":"Commune","dateCreation":"1943-01-01","intituleSansArticle":"Rochette","typeArticle":"3","intitule":"La
+        Rochette"},{"code":"05124","uri":"http://id.insee.fr/geo/commune/5e43e3e9-b9c4-4c03-b2f3-491fd2d1cac6","type":"Commune","dateCreation":"1943-01-01","intituleSansArticle":"Rochette","typeArticle":"3","intitule":"La
+        Rochette"},{"code":"07195","uri":"http://id.insee.fr/geo/commune/ddff463c-8d8e-4966-8242-905de189b829","type":"Commune","dateCreation":"1943-01-01","intituleSansArticle":"Rochette","typeArticle":"3","intitule":"La
+        Rochette"},{"code":"16282","uri":"http://id.insee.fr/geo/commune/0a4c7bd8-4ff8-4728-9f23-50c0f4f72690","type":"Commune","dateCreation":"1943-01-01","intituleSansArticle":"Rochette","typeArticle":"3","intitule":"La
+        Rochette"},{"code":"26279","uri":"http://id.insee.fr/geo/commune/b1c9d62c-94d5-42de-a5a3-26364bf5dd58","type":"Commune","dateCreation":"1943-01-01","intituleSansArticle":"Rochette-du-Buis","typeArticle":"3","intitule":"La
+        Rochette-du-Buis"},{"code":"73215","uri":"http://id.insee.fr/geo/commune/ae77baa4-f0ae-4b10-a28e-8e21aa313f11","type":"Commune","dateCreation":"1943-01-01","dateSuppression":"2019-01-01","intituleSansArticle":"Rochette","typeArticle":"3","intitule":"La
+        Rochette"},{"code":"77389","uri":"http://id.insee.fr/geo/commune/51dfcb93-4a1f-4ea1-9cca-d9f2c2efcc40","type":"Commune","dateCreation":"1943-01-01","intituleSansArticle":"Rochette","typeArticle":"3","intitule":"La
+        Rochette"}]'
+  recorded_at: Wed, 12 Apr 2023 20:10:57 GMT
+recorded_with: VCR 6.1.0

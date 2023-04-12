@@ -91,6 +91,16 @@ curl "http://localhost:9292?nom_commune=Gennevilliers&annee_naissance=1960&depar
 > {"code_insee":"75036"}
 ```
 
+## Tests
+
+```sh
+bundle exec rspec
+```
+
+La stack de tests utilise VCR pour enregistrer les nouvelles interactions sur
+l'INSEE. Vous pouvez ajouter des tests dans le fichier
+[examples.csv](./spec/examples.csv).
+
 ## Deploy
 
 ```sh
@@ -109,4 +119,4 @@ curl "https://identite-pivot-code-insee-naissance-lookup.fly.dev/?nom_commune=Ge
 
 ## TODO
 
-* Tests (jeux de tests and stuffs pour montrer ce qui marche bien)
+* Enhance les jeux de tests
