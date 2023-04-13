@@ -5,3 +5,5 @@ Cas d'une commune qui change de code INSEE dans le temps (2/2),Gennevilliers,200
 Cas avec homonyme,Saint-Arnoult,2000,14,14557
 Cas avec homonyme,La Rochette,2000,05,05124
 Cas avec homonyme et CP != COG,La Rochette,2000,04,04170
+Commune ayant changé de nom (2001) (1/2),Saint-Laurent,2000,58,58248
+Commune ayant changé de nom (2001) (2/2),Saint-Laurent-l'Abbaye,2010,58,58248

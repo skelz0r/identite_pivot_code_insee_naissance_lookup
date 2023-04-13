@@ -1,0 +1,97 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.insee.fr/token
+    body:
+      encoding: UTF-8
+      string: grant_type=client_credentials
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Authorization:
+      - Basic <INSEE_AUTH>
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - DENY
+      Cache-Control:
+      - no-store
+      X-Content-Type-Options:
+      - nosniff
+      Set-Cookie:
+      - INSEE=rd4o00000000000000000000ffff0ac348b0o9443; expires=Thu, 13-Apr-2023
+        08:09:28 GMT; path=/; Httponly; Secure
+      - pdapimgateway=rd4o00000000000000000000ffff0ac348aco8280; expires=Thu, 13-Apr-2023
+        08:09:28 GMT; path=/; Httponly; Secure
+      Pragma:
+      - no-cache
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 13 Apr 2023 07:49:28 GMT
+      Transfer-Encoding:
+      - chunked
+      Strict-Transport-Security:
+      - max-age=100000; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"<BEARER_TOKEN>","scope":"am_application_scope default","token_type":"Bearer","expires_in":109175}'
+  recorded_at: Thu, 13 Apr 2023 07:49:28 GMT
+- request:
+    method: get
+    uri: https://api.insee.fr/metadonnees/V1/geo/communes?com=false&date=2010-01-01&filtreNom=Saint-Laurent-l%27Abbaye
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept:
+      - application/json
+      Authorization:
+      - Bearer <BEARER_TOKEN>
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      Access-Control-Expose-Headers:
+      - Access-Control-Allow-Origin,Access-Control-Allow-Credentials,Content-Disposition
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET
+      Set-Cookie:
+      - INSEE=rd4o00000000000000000000ffff0ac33037o80; expires=Thu, 13-Apr-2023 08:09:30
+        GMT; path=/; Httponly; Secure
+      - pdapimgateway=rd4o00000000000000000000ffff0ac348ado8280; expires=Thu, 13-Apr-2023
+        08:09:30 GMT; path=/; Httponly; Secure
+      Access-Control-Allow-Headers:
+      - authorization,Access-Control-Allow-Origin,Content-Type,SOAPAction
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 13 Apr 2023 07:49:29 GMT
+      Transfer-Encoding:
+      - chunked
+      Strict-Transport-Security:
+      - max-age=100000; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: '[{"code":"58248","uri":"http://id.insee.fr/geo/commune/31259501-7d28-4dc5-9f3e-7b7849faba73","type":"Commune","dateCreation":"2001-02-04","intituleSansArticle":"Saint-Laurent-l''Abbaye","typeArticle":"0","intitule":"Saint-Laurent-l''Abbaye"}]'
+  recorded_at: Thu, 13 Apr 2023 07:49:30 GMT
+recorded_with: VCR 6.1.0
