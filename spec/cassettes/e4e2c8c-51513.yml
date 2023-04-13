@@ -1,0 +1,97 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.insee.fr/token
+    body:
+      encoding: UTF-8
+      string: grant_type=client_credentials
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Authorization:
+      - Basic <INSEE_AUTH>
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - DENY
+      Cache-Control:
+      - no-store
+      X-Content-Type-Options:
+      - nosniff
+      Set-Cookie:
+      - INSEE=rd4o00000000000000000000ffff0ac348b0o9443; expires=Thu, 13-Apr-2023
+        08:21:58 GMT; path=/; Httponly; Secure
+      - pdapimgateway=rd4o00000000000000000000ffff0ac348aco8280; expires=Thu, 13-Apr-2023
+        08:21:58 GMT; path=/; Httponly; Secure
+      Pragma:
+      - no-cache
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 13 Apr 2023 08:01:57 GMT
+      Transfer-Encoding:
+      - chunked
+      Strict-Transport-Security:
+      - max-age=100000; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"<BEARER_TOKEN>","scope":"am_application_scope default","token_type":"Bearer","expires_in":108425}'
+  recorded_at: Thu, 13 Apr 2023 08:01:58 GMT
+- request:
+    method: get
+    uri: https://api.insee.fr/metadonnees/V1/geo/communes?com=false&date=2000-01-01&filtreNom=Saint-Remy-en-Bouzemont-Saint-Genest-et-Isson
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept:
+      - application/json
+      Authorization:
+      - Bearer <BEARER_TOKEN>
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      Access-Control-Expose-Headers:
+      - Access-Control-Allow-Origin,Access-Control-Allow-Credentials,Content-Disposition
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET
+      Set-Cookie:
+      - INSEE=rd4o00000000000000000000ffff0ac33037o80; expires=Thu, 13-Apr-2023 08:21:59
+        GMT; path=/; Httponly; Secure
+      - pdapimgateway=rd4o00000000000000000000ffff0ac348aco8280; expires=Thu, 13-Apr-2023
+        08:21:59 GMT; path=/; Httponly; Secure
+      Access-Control-Allow-Headers:
+      - authorization,Access-Control-Allow-Origin,Content-Type,SOAPAction
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 13 Apr 2023 08:01:59 GMT
+      Transfer-Encoding:
+      - chunked
+      Strict-Transport-Security:
+      - max-age=100000; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: '[{"code":"51513","uri":"http://id.insee.fr/geo/commune/d926be6d-206b-4f74-a2e7-032b25982876","type":"Commune","dateCreation":"1943-01-01","intituleSansArticle":"Saint-Remy-en-Bouzemont-Saint-Genest-et-Isson","typeArticle":"0","intitule":"Saint-Remy-en-Bouzemont-Saint-Genest-et-Isson"}]'
+  recorded_at: Thu, 13 Apr 2023 08:01:59 GMT
+recorded_with: VCR 6.1.0
