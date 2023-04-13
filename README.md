@@ -45,6 +45,7 @@ sont peu probables (et d'ailleurs non existant en 2023).
 
 Liste non exhaustive:
 
+- Ne fonctionne qu'avec les communes en France
 - Commune dont il existe un homonyme dans le même département (non existant en
   2023)
 
