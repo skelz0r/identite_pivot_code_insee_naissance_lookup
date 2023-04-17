@@ -12,7 +12,8 @@ Le triplet est le suivant:
 3. `code departement de naissance`, `string`, code (format NN) insee du
    département de naissance
 
-A l'aide de ces 3 infos, l'API renvoie le code insee de la commune.
+A l'aide de ces 3 infos, l'API renvoie le code insee de la commune à l'année de
+naissance de l'utilisateur.
 
 ## Contexte
 
