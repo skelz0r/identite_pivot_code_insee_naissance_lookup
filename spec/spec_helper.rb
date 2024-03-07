@@ -30,13 +30,11 @@ VCR.configure do |c|
 
   c.filter_sensitive_data('<BEARER_TOKEN>') do |interaction|
     auths = interaction.request.headers['Authorization'].first
-    next if interaction.response.body == ''
-
-    json_body = JSON.parse(interaction.response.body)
 
     if (match = auths.match /^Bearer\s+([^,\s]+)/ )
       match.captures.first
-    elsif json_body['access_token']
+    elsif interaction.response.body != ''
+      json_body = JSON.parse(interaction.response.body)
       json_body['access_token']
     end
   end
