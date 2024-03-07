@@ -1,4 +1,4 @@
-notes,nom_commune,annee_naissance,departement_commune,code_insee
+notes,nom_commune_de_naissance,annee_naissance,departement_commune_actuel,code_insee
 Exemple simple,Le Teich,2000,33,33527
 Cas d'une commune qui change de code INSEE dans le temps (1/2),Gennevilliers,1960,92,75036
 Cas d'une commune qui change de code INSEE dans le temps (2/2),Gennevilliers,2000,92,92036

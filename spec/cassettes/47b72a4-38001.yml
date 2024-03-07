@@ -27,10 +27,10 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       Set-Cookie:
-      - INSEE=rd4o00000000000000000000ffff0ac348b0o9443; expires=Thu, 13-Apr-2023
-        07:52:41 GMT; path=/; Httponly; Secure
-      - pdapimgateway=rd4o00000000000000000000ffff0ac348aco8280; expires=Thu, 13-Apr-2023
-        07:52:41 GMT; path=/; Httponly; Secure
+      - HOMERE=!np9YOroui8eyZWiFALWMrR57K1E/IdjN39TxQQ6Xx5/+xsQv9Kqxx109BTY4uVB/vvwb5TrDART2x5sAh1/l842m3x6/k5FzYzn1XVFE5w==;
+        expires=Thu, 07-Mar-2024 11:08:52 GMT; path=/; Httponly; Secure
+      - pdapimgateway=rd4o00000000000000000000ffff0ac348aco8280; expires=Thu, 07-Mar-2024
+        11:08:52 GMT; path=/; Httponly; Secure
       Pragma:
       - no-cache
       X-Xss-Protection:
@@ -38,18 +38,18 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Thu, 13 Apr 2023 07:32:41 GMT
+      - Thu, 07 Mar 2024 10:48:52 GMT
       Transfer-Encoding:
       - chunked
       Strict-Transport-Security:
       - max-age=100000; includeSubDomains
     body:
       encoding: UTF-8
-      string: '{"access_token":"<BEARER_TOKEN>","scope":"am_application_scope default","token_type":"Bearer","expires_in":110182}'
-  recorded_at: Thu, 13 Apr 2023 07:32:41 GMT
+      string: '{"access_token":"<BEARER_TOKEN>","scope":"am_application_scope default","token_type":"Bearer","expires_in":603662}'
+  recorded_at: Thu, 07 Mar 2024 10:48:52 GMT
 - request:
     method: get
-    uri: https://api.insee.fr/metadonnees/V1/geo/communes?com=false&date=1960-01-01&filtreNom=Gennevilliers
+    uri: https://api.insee.fr/metadonnees/V1/geo/communes?com=false&date=1990-01-01&filtreNom=Les%20Abrets
     body:
       encoding: US-ASCII
       string: ''
@@ -67,31 +67,26 @@ http_interactions:
       code: 200
       message: ''
     headers:
-      X-Frame-Options:
-      - SAMEORIGIN
-      Access-Control-Expose-Headers:
-      - Access-Control-Allow-Origin,Access-Control-Allow-Credentials,Content-Disposition
       Access-Control-Allow-Origin:
       - "*"
       Access-Control-Allow-Methods:
       - GET
-      Set-Cookie:
-      - INSEE=rd4o00000000000000000000ffff0ac33037o80; expires=Thu, 13-Apr-2023 07:52:43
-        GMT; path=/; Httponly; Secure
-      - pdapimgateway=rd4o00000000000000000000ffff0ac348ado8280; expires=Thu, 13-Apr-2023
-        07:52:43 GMT; path=/; Httponly; Secure
       Access-Control-Allow-Headers:
       - authorization,Access-Control-Allow-Origin,Content-Type,SOAPAction
       Content-Type:
       - application/json
       Date:
-      - Thu, 13 Apr 2023 07:32:43 GMT
+      - Thu, 07 Mar 2024 10:48:53 GMT
       Transfer-Encoding:
       - chunked
+      Set-Cookie:
+      - pdapimgateway=rd4o00000000000000000000ffff0ac348ado8280; expires=Thu, 07-Mar-2024
+        11:08:54 GMT; path=/; Httponly; Secure
       Strict-Transport-Security:
       - max-age=100000; includeSubDomains
     body:
       encoding: UTF-8
-      string: '[{"code":"75036","uri":"http://id.insee.fr/geo/commune/1b8452d3-6e51-4393-b733-e128b776fe17","type":"Commune","dateCreation":"1943-01-01","dateSuppression":"1968-01-01","intituleSansArticle":"Gennevilliers","typeArticle":"0","intitule":"Gennevilliers"}]'
-  recorded_at: Thu, 13 Apr 2023 07:32:43 GMT
+      string: '[{"code":"38001","uri":"http://id.insee.fr/geo/commune/329d8877-bece-4919-a8f3-3af0e2d481c8","type":"Commune","dateCreation":"1943-01-01","dateSuppression":"2016-01-01","intituleSansArticle":"Abrets","typeArticle":"4","intitule":"Les
+        Abrets"}]'
+  recorded_at: Thu, 07 Mar 2024 10:48:54 GMT
 recorded_with: VCR 6.1.0

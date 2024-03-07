@@ -27,10 +27,10 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       Set-Cookie:
-      - INSEE=rd4o00000000000000000000ffff0ac348b0o9443; expires=Mon, 17-Apr-2023
-        10:29:29 GMT; path=/; Httponly; Secure
-      - pdapimgateway=rd4o00000000000000000000ffff0ac348ado8280; expires=Mon, 17-Apr-2023
-        10:29:29 GMT; path=/; Httponly; Secure
+      - HOMERE=!v2vxkXwGE6/HfKKFALWMrR57K1E/IV0FafTJvEYcmK9UCqGSERb9bl3rNbj+K/MDRAocN6Kg/Pbvrji4BO0bXPspk0CpiJaXt/PKjlraWg==;
+        expires=Thu, 07-Mar-2024 11:08:46 GMT; path=/; Httponly; Secure
+      - pdapimgateway=rd4o00000000000000000000ffff0ac348ado8280; expires=Thu, 07-Mar-2024
+        11:08:46 GMT; path=/; Httponly; Secure
       Pragma:
       - no-cache
       X-Xss-Protection:
@@ -38,18 +38,18 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 17 Apr 2023 10:09:29 GMT
+      - Thu, 07 Mar 2024 10:48:45 GMT
       Transfer-Encoding:
       - chunked
       Strict-Transport-Security:
       - max-age=100000; includeSubDomains
     body:
       encoding: UTF-8
-      string: '{"access_token":"<BEARER_TOKEN>","scope":"am_application_scope default","token_type":"Bearer","expires_in":604157}'
-  recorded_at: Mon, 17 Apr 2023 10:09:29 GMT
+      string: '{"access_token":"<BEARER_TOKEN>","scope":"am_application_scope default","token_type":"Bearer","expires_in":603668}'
+  recorded_at: Thu, 07 Mar 2024 10:48:46 GMT
 - request:
     method: get
-    uri: https://api.insee.fr/metadonnees/V1/geo/communes?com=false&date=2020-01-01&filtreNom=Les%20Abrets%20en%20Dauphin%C3%A9
+    uri: https://api.insee.fr/metadonnees/V1/geo/communes?com=false&date=2000-01-01&filtreNom=Saint-Remy-en-Bouzemont-Saint-Genest-et-Isson
     body:
       encoding: US-ASCII
       string: ''
@@ -67,32 +67,25 @@ http_interactions:
       code: 200
       message: ''
     headers:
-      X-Frame-Options:
-      - SAMEORIGIN
-      Access-Control-Expose-Headers:
-      - Access-Control-Allow-Origin,Access-Control-Allow-Credentials,Content-Disposition
       Access-Control-Allow-Origin:
       - "*"
       Access-Control-Allow-Methods:
       - GET
-      Set-Cookie:
-      - INSEE=rd4o00000000000000000000ffff0ac33037o80; expires=Mon, 17-Apr-2023 10:29:31
-        GMT; path=/; Httponly; Secure
-      - pdapimgateway=rd4o00000000000000000000ffff0ac348aco8280; expires=Mon, 17-Apr-2023
-        10:29:31 GMT; path=/; Httponly; Secure
       Access-Control-Allow-Headers:
       - authorization,Access-Control-Allow-Origin,Content-Type,SOAPAction
       Content-Type:
       - application/json
       Date:
-      - Mon, 17 Apr 2023 10:09:31 GMT
+      - Thu, 07 Mar 2024 10:48:47 GMT
       Transfer-Encoding:
       - chunked
+      Set-Cookie:
+      - pdapimgateway=rd4o00000000000000000000ffff0ac348aco8280; expires=Thu, 07-Mar-2024
+        11:08:47 GMT; path=/; Httponly; Secure
       Strict-Transport-Security:
       - max-age=100000; includeSubDomains
     body:
       encoding: UTF-8
-      string: '[{"code":"38001","uri":"http://id.insee.fr/geo/commune/33dacf78-ea26-45fa-935d-d74a8dfae3ca","type":"Commune","dateCreation":"2016-01-01","intituleSansArticle":"Abrets
-        en Dauphiné","typeArticle":"4","intitule":"Les Abrets en Dauphiné"}]'
-  recorded_at: Mon, 17 Apr 2023 10:09:31 GMT
+      string: '[{"code":"51513","uri":"http://id.insee.fr/geo/commune/d926be6d-206b-4f74-a2e7-032b25982876","type":"Commune","dateCreation":"1943-01-01","intituleSansArticle":"Saint-Remy-en-Bouzemont-Saint-Genest-et-Isson","typeArticle":"0","intitule":"Saint-Remy-en-Bouzemont-Saint-Genest-et-Isson"}]'
+  recorded_at: Thu, 07 Mar 2024 10:48:47 GMT
 recorded_with: VCR 6.1.0

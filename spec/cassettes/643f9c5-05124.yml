@@ -27,10 +27,10 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       Set-Cookie:
-      - INSEE=rd4o00000000000000000000ffff0ac348b0o9443; expires=Thu, 13-Apr-2023
-        07:52:49 GMT; path=/; Httponly; Secure
-      - pdapimgateway=rd4o00000000000000000000ffff0ac348aco8280; expires=Thu, 13-Apr-2023
-        07:52:49 GMT; path=/; Httponly; Secure
+      - HOMERE=!UaVneqqcBC5VIt+FALWMrR57K1E/Ib9MMaRj75aAvAW0iBbKbFiXHVgLrSTeGKsNlhEnFjEaxUjb12prF2fsb6Iiq/LxNnFFEpZVzr7Raw==;
+        expires=Thu, 07-Mar-2024 11:08:40 GMT; path=/; Httponly; Secure
+      - pdapimgateway=rd4o00000000000000000000ffff0ac348aco8280; expires=Thu, 07-Mar-2024
+        11:08:40 GMT; path=/; Httponly; Secure
       Pragma:
       - no-cache
       X-Xss-Protection:
@@ -38,15 +38,15 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Thu, 13 Apr 2023 07:32:49 GMT
+      - Thu, 07 Mar 2024 10:48:40 GMT
       Transfer-Encoding:
       - chunked
       Strict-Transport-Security:
       - max-age=100000; includeSubDomains
     body:
       encoding: UTF-8
-      string: '{"access_token":"<BEARER_TOKEN>","scope":"am_application_scope default","token_type":"Bearer","expires_in":110173}'
-  recorded_at: Thu, 13 Apr 2023 07:32:49 GMT
+      string: '{"access_token":"<BEARER_TOKEN>","scope":"am_application_scope default","token_type":"Bearer","expires_in":603674}'
+  recorded_at: Thu, 07 Mar 2024 10:48:40 GMT
 - request:
     method: get
     uri: https://api.insee.fr/metadonnees/V1/geo/communes?com=false&date=2000-01-01&filtreNom=La%20Rochette
@@ -67,27 +67,21 @@ http_interactions:
       code: 200
       message: ''
     headers:
-      X-Frame-Options:
-      - SAMEORIGIN
-      Access-Control-Expose-Headers:
-      - Access-Control-Allow-Origin,Access-Control-Allow-Credentials,Content-Disposition
       Access-Control-Allow-Origin:
       - "*"
       Access-Control-Allow-Methods:
       - GET
-      Set-Cookie:
-      - INSEE=rd4o00000000000000000000ffff0ac33038o80; expires=Thu, 13-Apr-2023 07:52:51
-        GMT; path=/; Httponly; Secure
-      - pdapimgateway=rd4o00000000000000000000ffff0ac348aco8280; expires=Thu, 13-Apr-2023
-        07:52:51 GMT; path=/; Httponly; Secure
       Access-Control-Allow-Headers:
       - authorization,Access-Control-Allow-Origin,Content-Type,SOAPAction
       Content-Type:
       - application/json
       Date:
-      - Thu, 13 Apr 2023 07:32:51 GMT
+      - Thu, 07 Mar 2024 10:48:41 GMT
       Transfer-Encoding:
       - chunked
+      Set-Cookie:
+      - pdapimgateway=rd4o00000000000000000000ffff0ac348aco8280; expires=Thu, 07-Mar-2024
+        11:08:41 GMT; path=/; Httponly; Secure
       Strict-Transport-Security:
       - max-age=100000; includeSubDomains
     body:
@@ -100,5 +94,5 @@ http_interactions:
         Rochette-du-Buis"},{"code":"73215","uri":"http://id.insee.fr/geo/commune/ae77baa4-f0ae-4b10-a28e-8e21aa313f11","type":"Commune","dateCreation":"1943-01-01","dateSuppression":"2019-01-01","intituleSansArticle":"Rochette","typeArticle":"3","intitule":"La
         Rochette"},{"code":"77389","uri":"http://id.insee.fr/geo/commune/51dfcb93-4a1f-4ea1-9cca-d9f2c2efcc40","type":"Commune","dateCreation":"1943-01-01","intituleSansArticle":"Rochette","typeArticle":"3","intitule":"La
         Rochette"}]'
-  recorded_at: Thu, 13 Apr 2023 07:32:51 GMT
+  recorded_at: Thu, 07 Mar 2024 10:48:41 GMT
 recorded_with: VCR 6.1.0
