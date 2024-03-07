@@ -1,0 +1,91 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.insee.fr/token
+    body:
+      encoding: UTF-8
+      string: grant_type=client_credentials
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Authorization:
+      - Basic <INSEE_AUTH>
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - DENY
+      Cache-Control:
+      - no-store
+      X-Content-Type-Options:
+      - nosniff
+      Set-Cookie:
+      - HOMERE=!CL6klix8XmMVR7+FALWMrR57K1E/IYKIoyUcXyJ5PjHMIaqCnR2VXIuVlGXP5knGZB7XWABTyW5nDqeSO2gMpbMe14+q/TzL3a3SXH6EUA==;
+        expires=Thu, 07-Mar-2024 11:57:02 GMT; path=/; Httponly; Secure
+      - pdapimgateway=rd4o00000000000000000000ffff0ac348aco8280; expires=Thu, 07-Mar-2024
+        11:57:02 GMT; path=/; Httponly; Secure
+      Pragma:
+      - no-cache
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 07 Mar 2024 11:37:01 GMT
+      Transfer-Encoding:
+      - chunked
+      Strict-Transport-Security:
+      - max-age=100000; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"<BEARER_TOKEN>","scope":"am_application_scope default","token_type":"Bearer","expires_in":600772}'
+  recorded_at: Thu, 07 Mar 2024 11:37:02 GMT
+- request:
+    method: get
+    uri: https://api.insee.fr/metadonnees/V1/geo/communes?com=false&date=2012-01-01&filtreNom=Dzaoudzi
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept:
+      - application/json
+      Authorization:
+      - Bearer <BEARER_TOKEN>
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET
+      Access-Control-Allow-Headers:
+      - authorization,Access-Control-Allow-Origin,Content-Type,SOAPAction
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 07 Mar 2024 11:37:03 GMT
+      Transfer-Encoding:
+      - chunked
+      Set-Cookie:
+      - pdapimgateway=rd4o00000000000000000000ffff0ac348aco8280; expires=Thu, 07-Mar-2024
+        11:57:03 GMT; path=/; Httponly; Secure
+      Strict-Transport-Security:
+      - max-age=100000; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: '[{"code":"97608","uri":"http://id.insee.fr/geo/commune/a0eb5908-8f6f-4fb1-8aa2-a2c4e64dd93f","type":"Commune","dateCreation":"2011-03-31","dateSuppression":"2023-08-27","intituleSansArticle":"Dzaoudzi","typeArticle":"0","intitule":"Dzaoudzi"}]'
+  recorded_at: Thu, 07 Mar 2024 11:37:03 GMT
+recorded_with: VCR 6.1.0
