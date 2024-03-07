@@ -13,8 +13,12 @@ RSpec.describe CodeINSEEForBirthDateAndPlace do
     it "works for (#{csv['nom_commune_de_naissance']}, #{csv['annee_naissance']}, #{csv['departement_commune_naissance']}): #{csv['notes']}", vcr: { cassette_name: "#{hexhash}-#{csv['code_insee']}", record: :new_episodes } do
       status, payload = CodeINSEEForBirthDateAndPlace.new(csv['nom_commune_de_naissance'], csv['annee_naissance'], csv['departement_commune_naissance']).perform
 
-      expect(status).to eq(200)
-      expect(payload[:code_insee]).to eq(csv['code_insee'])
+      if csv['code_insee'] == 'Inconnu'
+        expect(status).to eq(404)
+      else
+        expect(status).to eq(200)
+        expect(payload[:code_insee]).to eq(csv['code_insee'])
+      end
     end
   end
 end
