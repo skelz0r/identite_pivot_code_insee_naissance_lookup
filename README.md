@@ -7,10 +7,11 @@ le code INSEE de la commune de naissance d'un utilisateur.
 
 Le triplet est le suivant:
 
-1. `nom commune`, `string`, nom de la commune de naissance
+1. `nom commune`, `string`, nom de la commune de naissance à la date de la
+   naissance ;
 2. `annee de naissance`, `string`, année (format YYYY) de naissance de l'usager
 3. `code departement de naissance`, `string`, code (format NN) insee du
-   département de naissance
+   département de naissance en cours
 
 A l'aide de ces 3 infos, l'API renvoie le code insee de la commune à l'année de
 naissance de l'utilisateur.
