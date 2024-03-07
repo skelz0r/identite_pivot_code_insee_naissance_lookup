@@ -27,10 +27,10 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       Set-Cookie:
-      - HOMERE=!/kSrgxiWAyvrkQaFALWMrR57K1E/IaOkbMVKwZ07m22I2TBYLg1eNNZASHI4P6c8DcAsfTE6td6fAXmvdAEUyyjR4STvC8sL8p8CvmqQZQ==;
-        expires=Thu, 07-Mar-2024 11:08:44 GMT; path=/; Httponly; Secure
-      - pdapimgateway=rd4o00000000000000000000ffff0ac348aco8280; expires=Thu, 07-Mar-2024
-        11:08:44 GMT; path=/; Httponly; Secure
+      - HOMERE=!zFynZe1HlSScvlKFALWMrR57K1E/IQBlsM4xEuyFKl70+8ezmh5cTjMvjG/EZefKZbQxaOr7HhWJbkaB7l8n5xyA0wXhBnRhj52QpNm29g==;
+        expires=Thu, 07-Mar-2024 11:36:29 GMT; path=/; Httponly; Secure
+      - pdapimgateway=rd4o00000000000000000000ffff0ac348ado8280; expires=Thu, 07-Mar-2024
+        11:36:29 GMT; path=/; Httponly; Secure
       Pragma:
       - no-cache
       X-Xss-Protection:
@@ -38,18 +38,18 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Thu, 07 Mar 2024 10:48:44 GMT
+      - Thu, 07 Mar 2024 11:16:28 GMT
       Transfer-Encoding:
       - chunked
       Strict-Transport-Security:
       - max-age=100000; includeSubDomains
     body:
       encoding: UTF-8
-      string: '{"access_token":"<BEARER_TOKEN>","scope":"am_application_scope default","token_type":"Bearer","expires_in":603670}'
-  recorded_at: Thu, 07 Mar 2024 10:48:44 GMT
+      string: '{"access_token":"<BEARER_TOKEN>","scope":"am_application_scope default","token_type":"Bearer","expires_in":602006}'
+  recorded_at: Thu, 07 Mar 2024 11:16:29 GMT
 - request:
     method: get
-    uri: https://api.insee.fr/metadonnees/V1/geo/communes?com=false&date=2010-01-01&filtreNom=Saint-Laurent-l%27Abbaye
+    uri: https://api.insee.fr/metadonnees/V1/geo/communes?com=false&date=2020-01-01&filtreNom=Les%20Abrets%20en%20Dauphin%C3%A9
     body:
       encoding: US-ASCII
       string: ''
@@ -76,16 +76,17 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Thu, 07 Mar 2024 10:48:46 GMT
+      - Thu, 07 Mar 2024 11:16:29 GMT
       Transfer-Encoding:
       - chunked
       Set-Cookie:
-      - pdapimgateway=rd4o00000000000000000000ffff0ac348aco8280; expires=Thu, 07-Mar-2024
-        11:08:46 GMT; path=/; Httponly; Secure
+      - pdapimgateway=rd4o00000000000000000000ffff0ac348ado8280; expires=Thu, 07-Mar-2024
+        11:36:30 GMT; path=/; Httponly; Secure
       Strict-Transport-Security:
       - max-age=100000; includeSubDomains
     body:
       encoding: UTF-8
-      string: '[{"code":"58248","uri":"http://id.insee.fr/geo/commune/31259501-7d28-4dc5-9f3e-7b7849faba73","type":"Commune","dateCreation":"2001-02-04","intituleSansArticle":"Saint-Laurent-l''Abbaye","typeArticle":"0","intitule":"Saint-Laurent-l''Abbaye"}]'
-  recorded_at: Thu, 07 Mar 2024 10:48:46 GMT
+      string: '[{"code":"38001","uri":"http://id.insee.fr/geo/commune/33dacf78-ea26-45fa-935d-d74a8dfae3ca","type":"Commune","dateCreation":"2016-01-01","intituleSansArticle":"Abrets
+        en Dauphiné","typeArticle":"4","intitule":"Les Abrets en Dauphiné"}]'
+  recorded_at: Thu, 07 Mar 2024 11:16:30 GMT
 recorded_with: VCR 6.1.0

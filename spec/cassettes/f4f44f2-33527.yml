@@ -27,10 +27,10 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       Set-Cookie:
-      - HOMERE=!dFCJI2RMqEY9bzOFALWMrR57K1E/IVjXZIaP1ibMty5co0yBmBUmfFosfeVblxA6uddOcV0eImU6nxqXwmci9h3oI4y7K1TyMfg0jwZPDQ==;
-        expires=Thu, 07-Mar-2024 11:34:51 GMT; path=/; Httponly; Secure
+      - HOMERE=!zopbNOpnCbJmDDSFALWMrR57K1E/IUYXIJ4fx2fYb5dVJjqHAYbY8Aiy+LwrLdmJTi2esjyANFhwsgyZFiF4gDlUq0X1mwKSaSIzYw7TDQ==;
+        expires=Thu, 07-Mar-2024 11:36:12 GMT; path=/; Httponly; Secure
       - pdapimgateway=rd4o00000000000000000000ffff0ac348aco8280; expires=Thu, 07-Mar-2024
-        11:34:51 GMT; path=/; Httponly; Secure
+        11:36:12 GMT; path=/; Httponly; Secure
       Pragma:
       - no-cache
       X-Xss-Protection:
@@ -38,18 +38,18 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Thu, 07 Mar 2024 11:14:50 GMT
+      - Thu, 07 Mar 2024 11:16:11 GMT
       Transfer-Encoding:
       - chunked
       Strict-Transport-Security:
       - max-age=100000; includeSubDomains
     body:
       encoding: UTF-8
-      string: '{"access_token":"<BEARER_TOKEN>","scope":"am_application_scope default","token_type":"Bearer","expires_in":602103}'
-  recorded_at: Thu, 07 Mar 2024 11:14:51 GMT
+      string: '{"access_token":"<BEARER_TOKEN>","scope":"am_application_scope default","token_type":"Bearer","expires_in":602022}'
+  recorded_at: Thu, 07 Mar 2024 11:16:12 GMT
 - request:
     method: get
-    uri: https://api.insee.fr/metadonnees/V1/geo/communes?com=false&date=1980-01-01&filtreNom=Ajaccio
+    uri: https://api.insee.fr/metadonnees/V1/geo/communes?com=false&date=2000-01-01&filtreNom=Le%20Teich
     body:
       encoding: US-ASCII
       string: ''
@@ -76,16 +76,17 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Thu, 07 Mar 2024 11:14:52 GMT
+      - Thu, 07 Mar 2024 11:16:13 GMT
       Transfer-Encoding:
       - chunked
       Set-Cookie:
       - pdapimgateway=rd4o00000000000000000000ffff0ac348aco8280; expires=Thu, 07-Mar-2024
-        11:34:52 GMT; path=/; Httponly; Secure
+        11:36:13 GMT; path=/; Httponly; Secure
       Strict-Transport-Security:
       - max-age=100000; includeSubDomains
     body:
       encoding: UTF-8
-      string: '[{"code":"2A004","uri":"http://id.insee.fr/geo/commune/b0f792b0-8575-48a4-8b5d-96222c49a195","type":"Commune","dateCreation":"1976-01-01","intituleSansArticle":"Ajaccio","typeArticle":"1","intitule":"Ajaccio"}]'
-  recorded_at: Thu, 07 Mar 2024 11:14:52 GMT
+      string: '[{"code":"33527","uri":"http://id.insee.fr/geo/commune/6c1c21be-37a6-41e3-b53e-944496a4604a","type":"Commune","dateCreation":"1943-01-01","intituleSansArticle":"Teich","typeArticle":"2","intitule":"Le
+        Teich"}]'
+  recorded_at: Thu, 07 Mar 2024 11:16:13 GMT
 recorded_with: VCR 6.1.0

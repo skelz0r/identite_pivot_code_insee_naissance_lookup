@@ -27,10 +27,10 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       Set-Cookie:
-      - HOMERE=!hpuuqZi+m0zJfIiFALWMrR57K1E/IV6LW9rMHtaYM0eSdmJ/8VbAU9gPVmgy/n2yFDLhTodUncyZ99/OGia5tG+5gbsGCG4e0O2y/8ueRQ==;
-        expires=Thu, 07-Mar-2024 11:08:55 GMT; path=/; Httponly; Secure
+      - HOMERE=!UhQEinpNv+zkXVaFALWMrR57K1E/ISCb5dgIpa2CCPArxl4zBwEksPAlNXCXruY9j5fJ8YiBQZ1o0Ed+oaouFWCARz3hlUro6GmtY6RjPg==;
+        expires=Thu, 07-Mar-2024 11:36:27 GMT; path=/; Httponly; Secure
       - pdapimgateway=rd4o00000000000000000000ffff0ac348aco8280; expires=Thu, 07-Mar-2024
-        11:08:55 GMT; path=/; Httponly; Secure
+        11:36:27 GMT; path=/; Httponly; Secure
       Pragma:
       - no-cache
       X-Xss-Protection:
@@ -38,18 +38,18 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Thu, 07 Mar 2024 10:48:55 GMT
+      - Thu, 07 Mar 2024 11:16:26 GMT
       Transfer-Encoding:
       - chunked
       Strict-Transport-Security:
       - max-age=100000; includeSubDomains
     body:
       encoding: UTF-8
-      string: '{"access_token":"<BEARER_TOKEN>","scope":"am_application_scope default","token_type":"Bearer","expires_in":603659}'
-  recorded_at: Thu, 07 Mar 2024 10:48:55 GMT
+      string: '{"access_token":"<BEARER_TOKEN>","scope":"am_application_scope default","token_type":"Bearer","expires_in":602007}'
+  recorded_at: Thu, 07 Mar 2024 11:16:27 GMT
 - request:
     method: get
-    uri: https://api.insee.fr/metadonnees/V1/geo/communes?com=false&date=1980-01-01&filtreNom=L%27Oudon
+    uri: https://api.insee.fr/metadonnees/V1/geo/communes?com=false&date=1990-01-01&filtreNom=Querqueville
     body:
       encoding: US-ASCII
       string: ''
@@ -76,16 +76,16 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Thu, 07 Mar 2024 10:48:56 GMT
+      - Thu, 07 Mar 2024 11:16:28 GMT
       Transfer-Encoding:
       - chunked
       Set-Cookie:
       - pdapimgateway=rd4o00000000000000000000ffff0ac348ado8280; expires=Thu, 07-Mar-2024
-        11:08:57 GMT; path=/; Httponly; Secure
+        11:36:28 GMT; path=/; Httponly; Secure
       Strict-Transport-Security:
       - max-age=100000; includeSubDomains
     body:
       encoding: UTF-8
-      string: '[{"code":"14624","uri":"http://id.insee.fr/geo/commune/52178819-ba30-4d31-b145-036ca37a038e","type":"Commune","dateCreation":"1973-01-01","dateSuppression":"1990-02-01","intituleSansArticle":"Oudon","typeArticle":"5","intitule":"L''Oudon"}]'
-  recorded_at: Thu, 07 Mar 2024 10:48:57 GMT
+      string: '[{"code":"50416","uri":"http://id.insee.fr/geo/commune/2fc29993-b86a-4d19-9c70-2394b44eee03","type":"Commune","dateCreation":"1943-01-01","dateSuppression":"2016-01-01","intituleSansArticle":"Querqueville","typeArticle":"0","intitule":"Querqueville"}]'
+  recorded_at: Thu, 07 Mar 2024 11:16:28 GMT
 recorded_with: VCR 6.1.0

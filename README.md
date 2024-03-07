@@ -11,7 +11,7 @@ Le triplet est le suivant:
    naissance ;
 2. `annee de naissance`, `string`, année (format YYYY) de naissance de l'usager
 3. `code departement de naissance`, `string`, code (format NN) insee du
-   département de naissance en cours
+   département de naissance à la date de la naissance.
 
 A l'aide de ces 3 infos, l'API renvoie le code insee de la commune à l'année de
 naissance de l'utilisateur.

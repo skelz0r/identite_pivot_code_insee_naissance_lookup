@@ -27,10 +27,10 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       Set-Cookie:
-      - HOMERE=!sNyTgvW5VzCTqFqFALWMrR57K1E/IQKw/SIKGsM9GaDBAmptrvcfPBpOpTeHirX3j6DEUJDuBnphNWp3VJo47sE4Fxz+cz3ZhaauXlo3kA==;
-        expires=Thu, 07-Mar-2024 11:08:49 GMT; path=/; Httponly; Secure
-      - pdapimgateway=rd4o00000000000000000000ffff0ac348aco8280; expires=Thu, 07-Mar-2024
-        11:08:49 GMT; path=/; Httponly; Secure
+      - HOMERE=!fV7q0ckZ+43oyziFALWMrR57K1E/IQDCJTQr4KFFSYnPHinSuOoBVD3yBgIo9kkSG5diGI2gypSthRHd5d7hZ9rGEymF2OdpegCtGBfcIw==;
+        expires=Thu, 07-Mar-2024 11:36:26 GMT; path=/; Httponly; Secure
+      - pdapimgateway=rd4o00000000000000000000ffff0ac348ado8280; expires=Thu, 07-Mar-2024
+        11:36:26 GMT; path=/; Httponly; Secure
       Pragma:
       - no-cache
       X-Xss-Protection:
@@ -38,18 +38,18 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Thu, 07 Mar 2024 10:48:49 GMT
+      - Thu, 07 Mar 2024 11:16:25 GMT
       Transfer-Encoding:
       - chunked
       Strict-Transport-Security:
       - max-age=100000; includeSubDomains
     body:
       encoding: UTF-8
-      string: '{"access_token":"<BEARER_TOKEN>","scope":"am_application_scope default","token_type":"Bearer","expires_in":603665}'
-  recorded_at: Thu, 07 Mar 2024 10:48:49 GMT
+      string: '{"access_token":"<BEARER_TOKEN>","scope":"am_application_scope default","token_type":"Bearer","expires_in":602009}'
+  recorded_at: Thu, 07 Mar 2024 11:16:26 GMT
 - request:
     method: get
-    uri: https://api.insee.fr/metadonnees/V1/geo/communes?com=false&date=1990-01-01&filtreNom=Querqueville
+    uri: https://api.insee.fr/metadonnees/V1/geo/communes?com=false&date=2000-01-01&filtreNom=Niederschaeffolsheim
     body:
       encoding: US-ASCII
       string: ''
@@ -76,16 +76,16 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Thu, 07 Mar 2024 10:48:50 GMT
+      - Thu, 07 Mar 2024 11:16:26 GMT
       Transfer-Encoding:
       - chunked
       Set-Cookie:
-      - pdapimgateway=rd4o00000000000000000000ffff0ac348aco8280; expires=Thu, 07-Mar-2024
-        11:08:51 GMT; path=/; Httponly; Secure
+      - pdapimgateway=rd4o00000000000000000000ffff0ac348ado8280; expires=Thu, 07-Mar-2024
+        11:36:27 GMT; path=/; Httponly; Secure
       Strict-Transport-Security:
       - max-age=100000; includeSubDomains
     body:
       encoding: UTF-8
-      string: '[{"code":"50416","uri":"http://id.insee.fr/geo/commune/2fc29993-b86a-4d19-9c70-2394b44eee03","type":"Commune","dateCreation":"1943-01-01","dateSuppression":"2016-01-01","intituleSansArticle":"Querqueville","typeArticle":"0","intitule":"Querqueville"}]'
-  recorded_at: Thu, 07 Mar 2024 10:48:51 GMT
+      string: '[{"code":"67331","uri":"http://id.insee.fr/geo/commune/b4db5baf-5510-4b37-bb99-6236a68f5c04","type":"Commune","dateCreation":"1943-01-01","intituleSansArticle":"Niederschaeffolsheim","typeArticle":"0","intitule":"Niederschaeffolsheim"}]'
+  recorded_at: Thu, 07 Mar 2024 11:16:27 GMT
 recorded_with: VCR 6.1.0

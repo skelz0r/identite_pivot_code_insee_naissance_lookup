@@ -27,10 +27,10 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       Set-Cookie:
-      - HOMERE=!37eFKE6uXQNmHBqFALWMrR57K1E/IYnjYKmQ/IzBSr7mv8blRTTWgUa3aVg6xg/aIh3E17iGnBK+GlwEhjF4hvmzoKmTbpy3DAOnVIfTTA==;
-        expires=Thu, 07-Mar-2024 11:08:33 GMT; path=/; Httponly; Secure
-      - pdapimgateway=rd4o00000000000000000000ffff0ac348ado8280; expires=Thu, 07-Mar-2024
-        11:08:33 GMT; path=/; Httponly; Secure
+      - HOMERE=!7RALx9NfbWXyEYWFALWMrR57K1E/IWfGegf1IPoyqbj7tsKoP34MkhRIKbgwmPXhFQKjw6HhN/SqJ7LLRWOxksevv6xgPIGWQJSUThlUdA==;
+        expires=Thu, 07-Mar-2024 11:36:30 GMT; path=/; Httponly; Secure
+      - pdapimgateway=rd4o00000000000000000000ffff0ac348aco8280; expires=Thu, 07-Mar-2024
+        11:36:30 GMT; path=/; Httponly; Secure
       Pragma:
       - no-cache
       X-Xss-Protection:
@@ -38,18 +38,18 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Thu, 07 Mar 2024 10:48:33 GMT
+      - Thu, 07 Mar 2024 11:16:29 GMT
       Transfer-Encoding:
       - chunked
       Strict-Transport-Security:
       - max-age=100000; includeSubDomains
     body:
       encoding: UTF-8
-      string: '{"access_token":"<BEARER_TOKEN>","scope":"am_application_scope default","token_type":"Bearer","expires_in":603681}'
-  recorded_at: Thu, 07 Mar 2024 10:48:33 GMT
+      string: '{"access_token":"<BEARER_TOKEN>","scope":"am_application_scope default","token_type":"Bearer","expires_in":602004}'
+  recorded_at: Thu, 07 Mar 2024 11:16:30 GMT
 - request:
     method: get
-    uri: https://api.insee.fr/metadonnees/V1/geo/communes?com=false&date=2000-01-01&filtreNom=Le%20Teich
+    uri: https://api.insee.fr/metadonnees/V1/geo/communes?com=false&date=1990-01-01&filtreNom=Les%20Abrets
     body:
       encoding: US-ASCII
       string: ''
@@ -76,17 +76,17 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Thu, 07 Mar 2024 10:48:34 GMT
+      - Thu, 07 Mar 2024 11:16:30 GMT
       Transfer-Encoding:
       - chunked
       Set-Cookie:
-      - pdapimgateway=rd4o00000000000000000000ffff0ac348ado8280; expires=Thu, 07-Mar-2024
-        11:08:35 GMT; path=/; Httponly; Secure
+      - pdapimgateway=rd4o00000000000000000000ffff0ac348aco8280; expires=Thu, 07-Mar-2024
+        11:36:31 GMT; path=/; Httponly; Secure
       Strict-Transport-Security:
       - max-age=100000; includeSubDomains
     body:
       encoding: UTF-8
-      string: '[{"code":"33527","uri":"http://id.insee.fr/geo/commune/6c1c21be-37a6-41e3-b53e-944496a4604a","type":"Commune","dateCreation":"1943-01-01","intituleSansArticle":"Teich","typeArticle":"2","intitule":"Le
-        Teich"}]'
-  recorded_at: Thu, 07 Mar 2024 10:48:35 GMT
+      string: '[{"code":"38001","uri":"http://id.insee.fr/geo/commune/329d8877-bece-4919-a8f3-3af0e2d481c8","type":"Commune","dateCreation":"1943-01-01","dateSuppression":"2016-01-01","intituleSansArticle":"Abrets","typeArticle":"4","intitule":"Les
+        Abrets"}]'
+  recorded_at: Thu, 07 Mar 2024 11:16:31 GMT
 recorded_with: VCR 6.1.0
