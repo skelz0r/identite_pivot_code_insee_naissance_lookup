@@ -1,0 +1,91 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.insee.fr/token
+    body:
+      encoding: UTF-8
+      string: grant_type=client_credentials
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Authorization:
+      - Basic <INSEE_AUTH>
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - DENY
+      Cache-Control:
+      - no-store
+      X-Content-Type-Options:
+      - nosniff
+      Set-Cookie:
+      - HOMERE=!7lB7LxvWE+XqLASFALWMrR57K1E/IVfdtjgy3GoRhIaS6TMoCa2CNF0Q9KDDvlOKCZdy8AqFw8GppIwYsvau0SCc6DdZ6ZEI7blXuyXbiw==;
+        expires=Thu, 07-Mar-2024 11:34:49 GMT; path=/; Httponly; Secure
+      - pdapimgateway=rd4o00000000000000000000ffff0ac348ado8280; expires=Thu, 07-Mar-2024
+        11:34:49 GMT; path=/; Httponly; Secure
+      Pragma:
+      - no-cache
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 07 Mar 2024 11:14:48 GMT
+      Transfer-Encoding:
+      - chunked
+      Strict-Transport-Security:
+      - max-age=100000; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"<BEARER_TOKEN>","scope":"am_application_scope default","token_type":"Bearer","expires_in":602105}'
+  recorded_at: Thu, 07 Mar 2024 11:14:49 GMT
+- request:
+    method: get
+    uri: https://api.insee.fr/metadonnees/V1/geo/communes?com=false&date=1960-01-01&filtreNom=Ajaccio
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept:
+      - application/json
+      Authorization:
+      - Bearer <BEARER_TOKEN>
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET
+      Access-Control-Allow-Headers:
+      - authorization,Access-Control-Allow-Origin,Content-Type,SOAPAction
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 07 Mar 2024 11:14:50 GMT
+      Transfer-Encoding:
+      - chunked
+      Set-Cookie:
+      - pdapimgateway=rd4o00000000000000000000ffff0ac348ado8280; expires=Thu, 07-Mar-2024
+        11:34:51 GMT; path=/; Httponly; Secure
+      Strict-Transport-Security:
+      - max-age=100000; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: '[{"code":"20004","uri":"http://id.insee.fr/geo/commune/48fd09cd-ade2-4fda-8552-c99b28775747","type":"Commune","dateCreation":"1943-01-01","dateSuppression":"1976-01-01","intituleSansArticle":"Ajaccio","typeArticle":"1","intitule":"Ajaccio"}]'
+  recorded_at: Thu, 07 Mar 2024 11:14:51 GMT
+recorded_with: VCR 6.1.0
