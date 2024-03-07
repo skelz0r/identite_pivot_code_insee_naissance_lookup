@@ -37,7 +37,8 @@ L'algorithme fonctionne de cette manière:
 1. Recherche sur l'[API metadonnées de l'INSEE](https://api.insee.fr/catalogue/site/themes/wso2/subthemes/insee/pages/item-info.jag?name=M%C3%A9tadonn%C3%A9es&version=V1&provider=insee),
    avec le couple (nom de la commune, année), si il n'y a qu'un résultat: on
    renvoie le code ;
-2. Si il y a plusieurs résultats, on filtre en fonction du département.
+2. Si il y a plusieurs résultats, on filtre en fonction du département. On
+   vérifie tout de même que le département correspond si il n'y a qu'un résultat
 
 Étant donné que la commune de naissance est généralement une commune comportant
 une maternité, les possibles homonymes de communes au sein d'un même département

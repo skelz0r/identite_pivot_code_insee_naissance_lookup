@@ -27,10 +27,10 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       Set-Cookie:
-      - HOMERE=!GEoW4OSoUDOmRwmFALWMrR57K1E/IY1qmynRu2msih8Zcsr7JtyFuBDzrBG8qlxSw71YnG5eDSYafYWUBeNm4+nWUkIBpZoGxaqBxy/LUg==;
-        expires=Thu, 07-Mar-2024 11:36:14 GMT; path=/; Httponly; Secure
-      - pdapimgateway=rd4o00000000000000000000ffff0ac348ado8280; expires=Thu, 07-Mar-2024
-        11:36:14 GMT; path=/; Httponly; Secure
+      - HOMERE=!LONFbUxMWt2rrBWFALWMrR57K1E/IZHPThAbce+ImOc8H352cUChptiGr3b5sLVOt4skh8dJdiZMLVtFp4T8taUr4Ka6Lu3tbkil2nBTWA==;
+        expires=Thu, 07-Mar-2024 12:27:19 GMT; path=/; Httponly; Secure
+      - pdapimgateway=rd4o00000000000000000000ffff0ac348aco8280; expires=Thu, 07-Mar-2024
+        12:27:19 GMT; path=/; Httponly; Secure
       Pragma:
       - no-cache
       X-Xss-Protection:
@@ -38,18 +38,18 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Thu, 07 Mar 2024 11:16:13 GMT
+      - Thu, 07 Mar 2024 12:07:19 GMT
       Transfer-Encoding:
       - chunked
       Strict-Transport-Security:
       - max-age=100000; includeSubDomains
     body:
       encoding: UTF-8
-      string: '{"access_token":"<BEARER_TOKEN>","scope":"am_application_scope default","token_type":"Bearer","expires_in":602021}'
-  recorded_at: Thu, 07 Mar 2024 11:16:14 GMT
+      string: '{"access_token":"<BEARER_TOKEN>","scope":"am_application_scope default","token_type":"Bearer","expires_in":598955}'
+  recorded_at: Thu, 07 Mar 2024 12:07:19 GMT
 - request:
     method: get
-    uri: https://api.insee.fr/metadonnees/V1/geo/communes?com=false&date=1960-01-01&filtreNom=Gennevilliers
+    uri: https://api.insee.fr/metadonnees/V1/geo/communes?com=false&date=1960-01-01&filtreNom=Ajaccio
     body:
       encoding: US-ASCII
       string: ''
@@ -76,16 +76,16 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Thu, 07 Mar 2024 11:16:14 GMT
+      - Thu, 07 Mar 2024 12:07:20 GMT
       Transfer-Encoding:
       - chunked
       Set-Cookie:
-      - pdapimgateway=rd4o00000000000000000000ffff0ac348ado8280; expires=Thu, 07-Mar-2024
-        11:36:15 GMT; path=/; Httponly; Secure
+      - pdapimgateway=rd4o00000000000000000000ffff0ac348aco8280; expires=Thu, 07-Mar-2024
+        12:27:20 GMT; path=/; Httponly; Secure
       Strict-Transport-Security:
       - max-age=100000; includeSubDomains
     body:
       encoding: UTF-8
-      string: '[{"code":"75036","uri":"http://id.insee.fr/geo/commune/1b8452d3-6e51-4393-b733-e128b776fe17","type":"Commune","dateCreation":"1943-01-01","dateSuppression":"1968-01-01","intituleSansArticle":"Gennevilliers","typeArticle":"0","intitule":"Gennevilliers"}]'
-  recorded_at: Thu, 07 Mar 2024 11:16:15 GMT
+      string: '[{"code":"20004","uri":"http://id.insee.fr/geo/commune/48fd09cd-ade2-4fda-8552-c99b28775747","type":"Commune","dateCreation":"1943-01-01","dateSuppression":"1976-01-01","intituleSansArticle":"Ajaccio","typeArticle":"1","intitule":"Ajaccio"}]'
+  recorded_at: Thu, 07 Mar 2024 12:07:20 GMT
 recorded_with: VCR 6.1.0
